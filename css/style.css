@@ -1,0 +1,108 @@
+body {
+  background-color: #f2f2f2;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.header {
+  margin-top: 0em;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.header .blog-title .logo {
+  margin-left: 1.5em;
+  color: #1e90ff;
+  font-size: 1.5em;
+  font-family: "comic sans ms";
+  text-decoration: none;
+}
+.header .nav .menu {
+  margin: 5px;
+  padding: 0;
+}
+.header .nav .menu .menu-item {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+.header .nav .menu .menu-item-link {
+  color: #aaa;
+  text-decoration: none;
+}
+.header .nav .menu .menu-item-link:hover {
+  color: #368ccb;
+}
+.post {
+  margin: 1em auto;
+  padding: 30px 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ddd;
+}
+.posts .post:first-child {
+  margin-top: 0;
+}
+.posts .post-title {
+  font-size: 1.5em;
+}
+.posts .post-title .post-title-link {
+  color: #368ccb;
+  text-decoration: none;
+}
+.posts .post-content a {
+  color: #368ccb;
+  text-decoration: none;
+}
+.posts .post-meta {
+  color: #bababa;
+}
+.page-nav {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.5em;
+  margin: 2em 0;
+  font-weight: bold;
+}
+.page-nav > * {
+  margin-right: 0.5em;
+  padding: 0.5em;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+.page-nav a:active,
+.page-nav a:link,
+.page-nav a:visited {
+  color: blue-color;
+}
+.page-nav .current {
+  color: #333;
+}
+.archive {
+  margin: 1em auto;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 2px #ddd;
+}
+.archive .post-archive {
+  list-style: none;
+  padding: 0;
+}
+.archive .post-archive .post-item {
+  margin: 5px 0;
+}
+.archive .post-archive .post-item .post-date {
+  display: inline-block;
+  margin-right: 10px;
+  color: #bababa;
+}
+.archive .post-archive .post-item .post.title {
+  color: #368ccb;
+  text-decoration: none;
+}
+.footer {
+  text-align: center;
+  margin-top: 40px;
+}

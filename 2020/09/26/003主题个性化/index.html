@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Mew&#39;s Blog</title>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+  <body>
+    <header class="header">
+  <div class="blog-title">
+    <span class="logo">Mew&#39;s Blog</span>
+  </div>
+  <nav class="nav">
+    <ul class="menu">
+        
+          <li class="menu-item">
+            <a href="/" class="menu-item-link">首页</a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/archives" class="menu-item-link">归档</a>
+          </li>
+        
+          <li class="menu-item">
+            <a href="/about" class="menu-item-link">关于</a>
+          </li>
+        
+    </ul>
+  </nav>
+</header>
+    <main class="main">
+      <article class="post">
+  <div class="post-title">
+    <h2 class="title">给hexo换个好看的主题</h2>
+  </div>
+  <div class="post-meta">
+    <span class="post-time">2020-09-26</span>
+  </div>
+  <div>
+    <p><strong>按：</strong>hexo博客默认的主题的完整度还是挺高的，但是美观度不佳，因此我想换一个好看的主题。而hexo的用户群也不小了而且有很多博主把自己的主题分享官网的主题库给大家使用。</p>
+<a id="more"></a>
+
+<hr>
+<h2 id="一、挑选主题"><a href="#一、挑选主题" class="headerlink" title="一、挑选主题"></a>一、挑选主题</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">官网|主题</a> 下有很多主题展示，可以从中选择一个来使用，下载多个来试用也是可以的。</p>
+<p>![微信图片_20200927103847](C:\Users\LIN\Desktop\blog pictures now\change_theme\微信图片_20200927103847.png)</p>
+<p><strong>PS：</strong>点击主题预览图可进入示例用博客，点击主题名称可进入主题GitHub仓库。</p>
+<h2 id="二、下载主题"><a href="#二、下载主题" class="headerlink" title="二、下载主题"></a>二、下载主题</h2><p>以主题 <strong>Repica</strong> 为例，点击主题名称后会进入以下界面：</p>
+<img src="/.com//Users\LIN\Desktop\blog pictures now\change_theme\微信图片_20200927104847.png" alt="微信图片_20200927104847" style="zoom: 33%;">
+
+<p>滚轮稍微往下啦，会看到一个可预览的REDME.md文件（不是所有主题都有的），这是一个对于该主题的一个介绍文档——可能会有主题简介、版本号、主题安装代码等信息。</p>
+<h3 id="1、Git命令行克隆（常用）"><a href="#1、Git命令行克隆（常用）" class="headerlink" title="1、Git命令行克隆（常用）"></a>1、Git命令行克隆（常用）</h3><p>像 <strong>Repica</strong> 的readme里就直接有给出 <code>git</code> 命令行的代码，这点说明了它对新手还是挺友好的。</p>
+<p><strong>Install</strong>（安装）</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:sabrinaluo/hexo-theme-replica.git themes/replica</span><br></pre></td></tr></table></figure>
+
+<p>or</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/sabrinaluo/hexo-theme-replica.git themes/replica</span><br></pre></td></tr></table></figure>
+
+<p>这两个代码二选其一就行了：</p>
+<p>在hexo博客文件夹下启动 <strong>Git Bash Here</strong> 输入或者复制粘贴选择的代码（建议手打，可以增加熟悉度；<code>git</code>命令行下  <strong>shift+Ins</strong>  粘贴），后回车即可克隆主题到本地，打开 <strong>hexo</strong> 文件夹下的 <strong>themes</strong> 就能看到新下载的主题了。</p>
+<p>![微信图片_20200927110749](C:\Users\LIN\Desktop\blog pictures now\change_theme\微信图片_20200927110749.png)</p>
+<p><strong>注：</strong></p>
+<p>对于克隆代码，对应不同的主题，只需要改动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;sabrinaluo&#x2F;hexo-theme-replica.git themes&#x2F;replica</span><br></pre></td></tr></table></figure>
+
+<p>代码中的网址<strong><a target="_blank" rel="noopener" href="https://github.com/sabrinaluo/hexo-theme-replica">https://github.com/sabrinaluo/hexo-theme-replica</a></strong>替换为你想使用的主题所在的网址即可。（<strong>themes/</strong>  后的主题名称也更改为你选择的主题的）</p>
+<h3 id="2、压缩包下载（部分主题支持）"><a href="#2、压缩包下载（部分主题支持）" class="headerlink" title="2、压缩包下载（部分主题支持）"></a>2、压缩包下载（部分主题支持）</h3><p>例如像主题 <strong><a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-flui">Fluid</a></strong> ，它会有 <strong>release版本</strong> 的文件，就相当于主题文件夹的一个压缩包，下载后解压并拷贝到 <strong>hexo</strong> 文件夹下的 <strong>themes</strong> 文件夹就可以了。</p>
+<img src="/.com//Users\LIN\Desktop\blog pictures now\change_theme\微信图片编辑_20200927133634.png" alt="微信图片编辑_20200927133634" style="zoom:50%;">
+
+<p><strong>注：</strong>最好重命名新主题的文件夹名（格式为最简主题名称即可，去掉版本号及前缀）。</p>
+<h2 id="三、启用新主题"><a href="#三、启用新主题" class="headerlink" title="三、启用新主题"></a>三、启用新主题</h2><p>用记事本打开博客主站的 <strong>_config.yml</strong> 文件，修改 <strong>theme</strong> 后的信息，改为新选择的主题名称（大小写和主题文件名一致）。</p>
+<p>然后在博客文件夹下 鼠标右键-Git Bash here 打开 <strong>git</strong> 命令行，分别输入代码：</p>
+<p><code>hexo clean</code>  删除生成的文件和缓存。</p>
+<p><code>hexo g</code>  生成文件</p>
+<p><code>hexo s</code>  搭建本地服务器</p>
+<p>在浏览器输入<a target="_blank" rel="noopener" href="http://localhost:4000/%E5%8D%B3%E5%8F%AF%E6%9F%A5%E7%9C%8B%E6%96%B0%E4%B8%BB%E9%A2%98%E4%B8%8B%E7%9A%84%E5%8D%9A%E5%AE%A2%E4%BA%86%E3%80%82%EF%BC%88**git">http://localhost:4000/即可查看新主题下的博客了。（**git</a>** 命令行下 Ctrl+c 就可以关闭本地服务器了）</p>
+<p>如果觉得主题合适，就可以输入命令 <code>hexo d</code> ，把新的静态文件部署到 <strong>Github</strong> 上了。</p>
+
+  </div>
+</article>
+    </main>
+    <footer class="footer">
+  <div class="footer_wrap">
+    <div class="copyright">
+      
+      <span>&copy </span>
+      
+        <span>2020</span>
+      
+      <span class="copyright_belong">Mew&#39;s Blog</span>
+    </div>
+    <div class="theme_info">
+      Powered by 
+      <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+       & 
+      <a href="" target="_blank" rel="nofollow noopener">wrabbit theme</a>
+      by 
+      <span class="author">Mew Lin</span>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>
