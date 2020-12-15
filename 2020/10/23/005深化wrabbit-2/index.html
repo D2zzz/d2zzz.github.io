@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <title>Mew&#39;s Blog</title>
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+  <body>
+    <topnav class="topnav">
+  <div class="blog-title">
+    <span class="logo" title="This is a blog in order to record something by Mew Lin.">Mew&#39;s Blog</span>
+  </div>
+  <nav class="nav">
+    <div class="menu">
+      <div class="menu-item">
+        <a href="/" class="menu-item-c">首页</a>
+      </div>      
+      <div class="menu-item">
+        <a href="/about" class="menu-item-c">关于页</a>
+      </div> 
+      <div class="menu-item-f">找文章
+        <ul>
+          <li><a href="/archives" class="menu-item-c">所有文章</a></li>
+          <li><a href="/tags" class="menu-item-c">所有标签</a></li>
+          <li><a href="/classification" class="menu-item-c">分类</a></li>
+        </ul>
+      </div>
+      <div class="menu-item-f">个人项目
+        <ul>
+          <li><a href="/" class="menu-item-c">DIY游艇</a></li>
+          <li><a href="/" class="menu-item-c">DIY机箱</a></li>
+          <li><a href="/" class="menu-item-c">电子制作</a></li>
+        </ul>
+      </div>
+    </div>  
+  </nav>
+  <div class="search-container">
+    <form action="/action_page.php"> 
+      <input type="text" placeholder="it doesn't work yet" name="search">
+      
+    </form>
+  </div>
+</topnav>
+    <header class="header">
+   
+</header>
+    <div class="home-contain">
+      <div class="L-Box">
+  A-HA
+</div>
+      <main class="main"> 
+        <article class="post">
+  <div class="post-title">
+    <h2 class="title">深化wrabbit</h2>
+  </div>
+  <div class="post-meta">
+    <span class="post-time">2020-10-23</span>
+  </div>
+  <div>
+    <p><strong>按：</strong>折腾是无极限的，照着教程把主题简单搭出来只是开始的开始，后边其他补充的部分就依据各人偏好来自由发挥了~这将是我过程笔记</p>
+<a id="more"></a>
+
+<h2 id="01-Footer的编写"><a href="#01-Footer的编写" class="headerlink" title="01-Footer的编写"></a>01-Footer的编写</h2><p>简单的 <strong>Footer</strong> 主要是包含网站版权框架备案信息等信息，我的第一版 <strong>Footer</strong> 选择了简洁的版本，编写方式类似于 <strong>header</strong> 及页码，需要分别编写样式及布局。</p>
+<h3 id="样式"><a href="#样式" class="headerlink" title="样式"></a>样式</h3><h4 id="创建样式文件"><a href="#创建样式文件" class="headerlink" title="创建样式文件"></a>创建样式文件</h4><p>**layout\ _partial\footer.ejs **（主题文件夹下）:</p>
+<p>（初版）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;footer class&#x3D;&quot;footer&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;footer_wrap&quot;&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;copyright&quot;&gt;</span><br><span class="line">      &lt;% var current &#x3D; date(Date.now(),&quot;YYYY&quot;) %&gt;</span><br><span class="line">      &lt;span&gt;&amp;copy &lt;&#x2F;span&gt;</span><br><span class="line">      &lt;% if(!theme.footer.since || theme.footer.since &#x3D;&#x3D; current) &#123; %&gt;</span><br><span class="line">        &lt;span&gt;&lt;%- current %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;% &#125;else&#123; %&gt;</span><br><span class="line">        &lt;span&gt;&lt;%- theme.footer.since %&gt; - &lt;%- current %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br><span class="line">      &lt;span class&#x3D;&quot;copyright_belong&quot;&gt;&lt;%&#x3D; theme.footer.copyright || config.title %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;div class&#x3D;&quot;theme_info&quot;&gt;</span><br><span class="line">      Powered by </span><br><span class="line">      &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;</span><br><span class="line">       &amp; </span><br><span class="line">      &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;nofollow noopener&quot;&gt;wrabbit theme&lt;&#x2F;a&gt;</span><br><span class="line">      by </span><br><span class="line">      &lt;span class&#x3D;&quot;author&quot;&gt;&lt;%&#x3D; config.author %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;footer&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;% var current &#x3D; date(Date.now(),&quot;YYYY&quot;) %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>导入当前年份的一个语句</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;&amp;copy &lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>   显示©copy+一个空格位（版权）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(!theme.footer.since || theme.footer.since &#x3D;&#x3D; current) &#123; %&gt;</span><br><span class="line">  &lt;span&gt;&lt;%- current %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;% &#125;else&#123; %&gt;</span><br><span class="line">  &lt;span&gt;&lt;%- theme.footer.since %&gt; - &lt;%- current %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这是一个if条件语句：</p>
+<p>判断 <strong>theme.footer.since</strong> 是否等于当前年份，如果是就直接输出当前年份（如2020），否 则输出 <strong>theme.footer.since</strong> 的年份+小横杠+当前年份（如1900-2020）</p>
+<p>同时需要在主题配置文件增加信息（我博客创建的时间是2020年）</p>
+<p><strong>_config.yml</strong> ；</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">footer:</span></span><br><span class="line">  <span class="comment"># 指定网站设置的日期</span></span><br><span class="line">  <span class="comment"># 如果没定义将会使用当前年份</span></span><br><span class="line">  <span class="attr">since:</span> <span class="number">2020</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class&#x3D;&quot;copyright_belong&quot;&gt;&lt;%&#x3D; theme.footer.copyright || config.title %&gt;&lt;&#x2F;span&gt;</span><br></pre></td></tr></table></figure>
+
+<p>版权归宿信息，这里我把版权归属了 <strong>Mew’s blog</strong> （<strong>hexo</strong> 的配置中 <strong>config</strong> 的值）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;theme_info&quot;&gt;</span><br><span class="line">  Powered by </span><br><span class="line">  &lt;a href&#x3D;&quot;https:&#x2F;&#x2F;hexo.io&quot;&gt;Hexo&lt;&#x2F;a&gt;</span><br><span class="line">   &amp; </span><br><span class="line">  &lt;a href&#x3D;&quot;&quot; target&#x3D;&quot;_blank&quot; rel&#x3D;&quot;nofollow noopener&quot;&gt;wrabbit theme&lt;&#x2F;a&gt;</span><br><span class="line">  by </span><br><span class="line">  &lt;span class&#x3D;&quot;author&quot;&gt;&lt;%&#x3D; config.author %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这一段是关于博客框架及主题的一段信息，显示内容如下：</p>
+<p>Powered by hexo &amp; wrabbit theme by Mew Lin</p>
+<p>以上为第一版页脚内容。</p>
+<p>往后，如果申请了域名并进行了网络备案，甚至托管了国内的服务器以后，可能就会另加一行备案信息了。</p>
+<h3 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h3><h4 id="创建布局文件"><a href="#创建布局文件" class="headerlink" title="创建布局文件"></a>创建布局文件</h4><p><strong>\source\css\ _partial\footer.styl</strong> :</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.footer</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin-top</span>: <span class="number">40px</span>;</span><br><span class="line">  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这是一版极简的布局，简单地设置了一个居中代码 <code> text-align: center;</code> 及内容 <strong>margin</strong> 顶部距离设置的代码 <code> margin-top: 40px;</code></p>
+<h2 id="02-导航条设计"><a href="#02-导航条设计" class="headerlink" title="02-导航条设计"></a>02-导航条设计</h2><p>我想用 <strong>header</strong> 来作他用，用导航条来顶替它的功能，并且后面还想给它整点简单的动态效果。</p>
+<p><strong>layout\ _partial\topnav.ejs</strong> (ver 0.0.1):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;topnav class&#x3D;&quot;topnav&quot;&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;blog-title&quot;&gt;</span><br><span class="line">    &lt;span class&#x3D;&quot;logo&quot;&gt;&lt;%&#x3D; config.title %&gt;&lt;&#x2F;span&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;nav class&#x3D;&quot;nav&quot;&gt;</span><br><span class="line">    &lt;ul class&#x3D;&quot;menu&quot;&gt;</span><br><span class="line">      &lt;% for (name in theme.menu) &#123; %&gt;</span><br><span class="line">        &lt;li class&#x3D;&quot;menu-item&quot;&gt;</span><br><span class="line">          &lt;a href&#x3D;&quot;&lt;%- url_for(theme.menu[name]) %&gt;&quot; class&#x3D;&quot;menu-item-link&quot;&gt;&lt;%- __(&#39;Menu.&#39; + name) %&gt;&lt;&#x2F;a&gt;</span><br><span class="line">        &lt;&#x2F;li&gt;</span><br><span class="line">      &lt;% &#125; %&gt;</span><br><span class="line">    &lt;&#x2F;ul&gt;  </span><br><span class="line">  &lt;&#x2F;nav&gt;</span><br><span class="line">  &lt;div class&#x3D;&quot;search-container&quot;&gt;</span><br><span class="line">    &lt;form action&#x3D;&quot;&#x2F;action_page.php&quot;&gt; </span><br><span class="line">      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;search..&quot; name&#x3D;&quot;search&quot;&gt;</span><br><span class="line">      &lt;button type&#x3D;&quot;submit&quot;&gt;&lt;i class&#x3D;&quot;fa fa-search&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;form&gt;</span><br><span class="line">  &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;topnav&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">.topnav &#123;</span><br><span class="line">  border:none;</span><br><span class="line">  margin-top: 0;</span><br><span class="line">  display: flex;</span><br><span class="line">  align-items: baseline;</span><br><span class="line">  justy-content: space-between;</span><br><span class="line">  background-color: black;</span><br><span class="line">  position: sticky;</span><br><span class="line">  position: -webkit-sticky;    &#x2F;&#x2F; 兼容 -webkit 内核的浏览器</span><br><span class="line">  top: 0;                          &#x2F;&#x2F; 必须设一个值，否则不生效</span><br><span class="line">  line-height: 1.25em;</span><br><span class="line"></span><br><span class="line">  .blog-title  .logo &#123;</span><br><span class="line">    margin: 0 1.5em 0 1.5em;</span><br><span class="line">    color: #1E90FF;</span><br><span class="line">    font-size: 1.5em;</span><br><span class="line">    font-family: &quot;comic sans ms&quot;;</span><br><span class="line">    text-decoration: none;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .nav &#123;</span><br><span class="line">    margin: 0 1em 0 1em;</span><br><span class="line"></span><br><span class="line">    .menu &#123;</span><br><span class="line">      margin: 0 1em 0 1em;</span><br><span class="line">      &#x2F;&#x2F;padding: 0;</span><br><span class="line"></span><br><span class="line">      .menu-item &#123;</span><br><span class="line">        display: inline-block;</span><br><span class="line">        margin: 0 1em 0 1em;</span><br><span class="line">        color: white;</span><br><span class="line">        text-decoration: none;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    .menu-item-link &#123;</span><br><span class="line">      color: white;</span><br><span class="line">      text-decoration: none;</span><br><span class="line"></span><br><span class="line">      &amp;:hover &#123;</span><br><span class="line">        color: #1E90FF;</span><br><span class="line">        border-bottom: 2px solid #1E90FF;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  .search-container &#123;</span><br><span class="line">    border 0.25em solid black;</span><br><span class="line">    margin: 0.5em 1em 0.5em 1em;</span><br><span class="line">    padding: 0.25em 1em 0.25em 1em;</span><br><span class="line">    background-color: #DDDEDB;</span><br><span class="line">    display: inline-block;</span><br><span class="line">    text-decoration: none;</span><br><span class="line"></span><br><span class="line">      input[type&#x3D;text] &#123;</span><br><span class="line">        </span><br><span class="line">        border: 0;</span><br><span class="line">        margin: 0 0 0 0;</span><br><span class="line">        padding: 0 0 0 0;</span><br><span class="line">        order: none;</span><br><span class="line">        font-size: 20px;</span><br><span class="line"></span><br><span class="line">        &amp;:hover &#123;</span><br><span class="line">          border: 1px solid black;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到这里，导航条的初步效果就出来了，但是呢，整个网页会与有个边框，导致整体效果会很怪，那是因为有默认的 <strong>margin</strong> 值在作怪因此修改 <strong>source\css\style.styl</strong> 文件，给 <strong>body</strong> 设置了一个无边框的值：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line"> margin: 0; &#x2F;&#x2F;增加的代码，设置网页无边框</span><br><span class="line"> background-color: #F2F2F2;</span><br><span class="line"> font-size: 1.25rem;</span><br><span class="line"> line-height: 1.5;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p> <strong>z-index</strong> 来前置导航栏</p>
+<p>置顶</p>
+<p>1、吸顶效果（<a target="_blank" rel="noopener" href="https://blog.csdn.net/webKris/article/details/85631098?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.channel_param">参考</a>）不需要z-index来达成前置效果</p>
+<p>2、</p>
+<p>高度变化</p>
+<p>毛玻璃动画</p>
+<p>搜索框</p>
+<p>框的样子有了，但是搜索标志出不来，没有功能</p>
+<p>鼠标悬停提示 done</p>
+<p>二级目录    </p>
+<h2 id="03-about页面"><a href="#03-about页面" class="headerlink" title="03-about页面"></a>03-about页面</h2><h2 id="04-图标配置"><a href="#04-图标配置" class="headerlink" title="04-图标配置"></a>04-图标配置</h2><h2 id="05-主页重新设计"><a href="#05-主页重新设计" class="headerlink" title="05-主页重新设计"></a>05-主页重新设计</h2><p>1、增加左信息框</p>
+<p>2、右边浮动按扭</p>
+<h2 id="0-增加发表日期及更新日期"><a href="#0-增加发表日期及更新日期" class="headerlink" title="0-增加发表日期及更新日期"></a>0-增加发表日期及更新日期</h2><p>style.styl</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">body &#123;</span><br><span class="line"> margin: 0; &#x2F;&#x2F;增加的代码，设置网页无边框</span><br><span class="line"> background-color: #F2F2F2;</span><br><span class="line"> font-size: 1.25rem;</span><br><span class="line"> line-height: 1.5;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.container &#123;</span><br><span class="line"> max-width: 960px;</span><br><span class="line"> margin: 0 auto;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;topnav&quot;;</span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;header&quot;;</span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;post&quot;;</span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;paginator&quot;;</span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;archive&quot;;</span><br><span class="line"></span><br><span class="line">@import &quot;_partial&#x2F;footer&quot;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<blockquote>
+<p>1、</p>
+<p>2、</p>
+<p>3、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/7519c71c8ea9">https://www.jianshu.com/p/7519c71c8ea9</a></p>
+<p>4、</p>
+</blockquote>
+
+  </div>
+</article>
+      </main>
+      
+    </div>
+    <footer class="footer">
+  <div class="footer_wrap">
+    <div class="copyright">
+      
+      <span>&copy </span>
+      
+        <span>2020</span>
+      
+      <span class="copyright_belong">Mew&#39;s Blog</span>
+    </div>
+    <div class="theme_info">
+      Powered by 
+      <a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>
+       & 
+      <a href="https://github.com/D2zzz/hexo-theme-wrabbit" target="_blank" rel="nofollow noopener">wrabbit theme</a>
+      by 
+      <span class="author">Mew Lin</span>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

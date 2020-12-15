@@ -1,5 +1,7 @@
 body {
-  background-color: #f2f2f2;
+  border: none;
+  margin: 0;
+  background-color: #ffc0cb;
   font-size: 1.25rem;
   line-height: 1.5;
 }
@@ -7,33 +9,133 @@ body {
   max-width: 960px;
   margin: 0 auto;
 }
-.header {
-  margin-top: 0em;
+ul {
+  magrin: 0;
+  padding: 0 0.75em 0 0.75em;
+}
+ul li {
+  list-style: none;
+  float: left;
+  clear: both;
+}
+a {
+  text-decoretion: none;
+}
+.topnav {
+  width: 100%;
+  height: 62px;
+  border: none;
+  margin-top: 0;
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+  justy-content: space-between;
+  background-color: #000;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  line-height: 1.25em;
 }
-.header .blog-title .logo {
-  margin-left: 1.5em;
+.topnav .blog-title .logo {
+  margin: 0 1.5em 0 1.5em;
   color: #1e90ff;
   font-size: 1.5em;
   font-family: "comic sans ms";
+  text-align: center;
   text-decoration: none;
 }
-.header .nav .menu {
-  margin: 5px;
+.topnav .blog-title .logo:hover {
+  cursor: pointer;
+}
+.topnav .blog-title .logo:hover ::before {
+  content: attr(title);
+}
+.topnav .blog-title .logo:hover ::after {
+  content: " ";
+  background-color: #d9444a;
+}
+.topnav .nav {
+  margin: 0 0.75em 0 0.75em;
+  float: left;
+}
+.topnav .nav .menu {
+  margin: 0 0.75em 0 0.75em;
+  display: flex;
+  align-items: baseline;
+  justy-content: space-between;
+  text-align: center;
+  max-height: 40px;
+}
+.topnav .nav .menu-item {
+  text-decoration: none;
+  margin: 0 0.75em 0 0.75em;
   padding: 0;
+  max-height: 40px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
 }
-.header .nav .menu .menu-item {
-  display: inline-block;
-  margin-right: 1.5em;
+.topnav .nav .menu-item:hover {
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
 }
-.header .nav .menu .menu-item-link {
-  color: #aaa;
+.topnav .nav .menu-item-f {
+  margin: 0 0 0 0;
+  padding: 0;
+  justy-content: space-between;
+  width: 120px;
+  max-height: 40px;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+  text-align: center;
+}
+.topnav .nav .menu-item-f:hover {
+  color: #1e90ff;
+  max-height: 400px;
+  transition: 0.5s;
+  cursor: pointer;
+  border-radius: 0.25em;
+}
+.topnav .nav .menu-item-c {
   text-decoration: none;
+  color: #fff;
+  text-align: center;
 }
-.header .nav .menu .menu-item-link:hover {
-  color: #368ccb;
+.topnav .nav .menu-item-c:hover {
+  color: #1e90ff;
+  border-bottom: 2px solid #1e90ff;
+}
+.topnav .nav .menu-item-c:hover .menu-item-f ul {
+  opacity: 0.5;
+}
+.topnav .nav .menu-item-c:hover .menu .menu-item-f {
+  border-radius: 10px;
+}
+.topnav .search-container {
+  border: 0.25em solid #000;
+  margin: 0.5em 1em 0.5em 1em;
+  padding: 0.25em 1em 0.25em 1em;
+  background-color: #fff;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 0.5em;
+}
+.topnav .search-container input[type=text] {
+  border: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  order: none;
+  font-size: 20px;
+  border: 1px solid #fff;
+}
+.topnav .search-container input[type=text]:hover {
+  border: 1px solid #000;
+}
+.header {
+  margin: 0 0 0 0;
+  padding: 0;
+  color: #1e90ff;
+  background-image: url("img/Purple Paradise.jpg");
 }
 .post {
   margin: 1em auto;
@@ -105,4 +207,7 @@ body {
 .footer {
   text-align: center;
   margin-top: 40px;
+}
+.about-page {
+  background: #000;
 }
